@@ -38,28 +38,31 @@
     <widget class="QWidget" name="controlsBox" native="true">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="title">
         <property name="text">
          <string>Assignment 4</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="fill2">
         <property name="text">
          <string/>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="smileLabel">
+       <widget class="QLabel" name="eccen_Label">
         <property name="text">
-         <string>Smile: 0</string>
+         <string>Head Eccentricity: 0</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QSlider" name="smileSlider">
+       <widget class="QSlider" name="eccen_Slider">
+        <property name="minimum">
+         <number>-100</number>
+        </property>
         <property name="maximum">
          <number>100</number>
         </property>
@@ -68,6 +71,114 @@
         </property>
         <property name="tracking">
          <bool>true</bool>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fill1">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="eye_size_Label">
+        <property name="text">
+         <string>Eye Size: 0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="eye_size_Slider">
+        <property name="minimum">
+         <number>-100</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fill3">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="eye_space_Label">
+        <property name="text">
+         <string>Eye Spacing: 0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="eye_space_Slider">
+        <property name="minimum">
+         <number>-100</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fill4">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="brow_slope_Label">
+        <property name="text">
+         <string>Eyebrow Slope: 0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="brow_slope_Slider">
+        <property name="minimum">
+         <number>-100</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="fill5">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mouth_curve_Label">
+        <property name="text">
+         <string>Mouth Curvature: 0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="mouth_curve_Slider">
+        <property name="minimum">
+         <number>-100</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>

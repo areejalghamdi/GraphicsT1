@@ -19,8 +19,12 @@ class Assignment4Widget(PyGlassWidget):
         super(Assignment4Widget, self).__init__(parent, **kwargs)
         #self.exampleBtn.clicked.connect(self._handleExampleButton)
         self.homeBtn.clicked.connect(self._handleReturnHome)
-        self.smileSlider.valueChanged.connect(self._handleSmileSlider)
 
+        self.eccen_Slider.valueChanged.connect(self._handleEccentricity)
+        self.eye_size_Slider.valueChanged.connect(self._handleEyeSize)
+        self.eye_space_Slider.valueChanged.connect(self._handleEyeSpace)
+        self.brow_slope_Slider.valueChanged.connect(self._handleBrowSlope)
+        self.mouth_curve_Slider.valueChanged.connect(self._handleMouthCurve)
 
 #===================================================================================================
 #                                                                                 H A N D L E R S
@@ -39,22 +43,52 @@ class Assignment4Widget(PyGlassWidget):
 #        cmds.select(c)
 #        response = nimble.createRemoteResponse(globals())
 #        response.put('name', c)
-
-
-    def _handleSmileSlider(self):
+    def _handleEccentricity(self):
 
         value = 0.0
-        value = self.smileSlider.value()
+        value = self.eccen_Slider.value()
         value =  value/100.0
-        self.smileLabel.setText("Smile: " + str(value))
+        self.eccen_Label.setText("Head Eccentricity: " + str(value))
 
-        cmds.setAttr('blendShape.smile', value)
+        return
 
+    def _handleEyeSize(self):
 
+        value = 0.0
+        value = self.eye_size_Slider.value()
+        value =  value/100.0
+        self.eye_size_Label.setText("Eye Size: " + str(value))
 
+        return
+
+    def _handleEyeSpace(self):
+
+        value = 0.0
+        value = self.eye_space_Slider.value()
+        value =  value/100.0
+        self.eye_space_Label.setText("Eye Spacing: " + str(value))
+
+        return
+
+    def _handleBrowSlope(self):
+
+        value = 0.0
+        value = self.brow_slope_Slider.value()
+        value =  value/100.0
+        self.brow_slope_Label.setText("Eyebrow Slope: " + str(value))
+
+        return
+
+    def _handleMouthCurve(self):
+
+        value = 0.0
+        value = self.mouth_curve_Slider.value()
+        value =  value/100.0
+        self.mouth_curve_Label.setText("Mouth Curvature: " + str(value))
+
+        return
 
 #___________________________________________________________________________________________________ _handleReturnHome
 
     def _handleReturnHome(self):
         self.mainWindow.setActiveWidget('home')
-
