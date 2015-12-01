@@ -50,6 +50,12 @@ class Assignment4Widget(PyGlassWidget):
         value =  value/100.0
         self.eccen_Label.setText("Head Eccentricity: " + str(value))
 
+        if (value >= 0):
+            cmds.setAttr( 'blendShape4.BigFaceWithWeightPainted1', value)
+
+        #if (value < 0):
+        #    cmds.setAttr( ' ', value * -1)
+
         return
 
     def _handleEyeSize(self):
@@ -77,6 +83,12 @@ class Assignment4Widget(PyGlassWidget):
         value =  value/100.0
         self.brow_slope_Label.setText("Eyebrow Slope: " + str(value))
 
+        if (value >= 0):
+          cmds.setAttr( 'blendShape4.RaiseLEyeBrow', value)
+          cmds.setAttr( 'blendShape4.RaiseREyeBrow', value)
+        if (value < 0):
+          cmds.setAttr( 'blendShape4.frownFace', value * -1)
+
         return
 
     def _handleMouthCurve(self):
@@ -85,6 +97,11 @@ class Assignment4Widget(PyGlassWidget):
         value = self.mouth_curve_Slider.value()
         value =  value/100.0
         self.mouth_curve_Label.setText("Mouth Curvature: " + str(value))
+
+        if (value >= 0):
+          cmds.setAttr( 'blendShape4.SmilingFace', value)
+        if (value < 0):
+          cmds.setAttr( 'blendShape4.sadFace', value * -1)
 
         return
 
